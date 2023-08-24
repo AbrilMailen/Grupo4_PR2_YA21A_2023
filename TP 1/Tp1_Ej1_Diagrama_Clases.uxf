@@ -1,0 +1,42 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>400</x><y>280</y><w>160</w><h>180</h></coordinates><panel_attributes>Comprobante
+--
+- nro_factura : double
+- importe : double
+--
+- calcularTotal() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>190</y><w>160</w><h>80</h></coordinates><panel_attributes>Producto
+--
+- precio : double
+- descripcion : string
+--
++ getPrecio() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>470</y><w>160</w><h>110</h></coordinates><panel_attributes>Cliente
+--
+- nombreCompleto : string
+- dni : double
+--
+- getNombreCompleto()
+- getDni();
++ getCliente() : Cliente</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>260</y><w>160</w><h>100</h></coordinates><panel_attributes>Fecha
+--
+- dia : int
+- mes : int
+- anio : int
+--
++ validarFecha() : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>350</y><w>380</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+- List&lt;ItemProductos&gt; productos</panel_attributes><additional_attributes>360;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>370</y><w>350</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+- datos_cliente</panel_attributes><additional_attributes>330;100;330;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>300</y><w>140</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+- fecha</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>150</y><w>140</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+TIPOS_COMPROBANTE
+--
++ F
++ C</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>320</y><w>160</w><h>80</h></coordinates><panel_attributes>ItemProductos
+--
+- cantidad : int
+--
++ calcularPrecio() : double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>260</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+- producto</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>220</y><w>60</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+- tipo</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>580</y><w>160</w><h>80</h></coordinates><panel_attributes>Sistema
+--
+--
++ procesarPagos() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>450</y><w>230</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+- List&lt;Comprobante&gt; comprobantes</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element></diagram>
